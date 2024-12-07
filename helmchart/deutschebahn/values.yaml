@@ -1,0 +1,33 @@
+deutschebahn:
+
+  image:
+    pullPolicy: Always # Always, IfNotPresent, Never
+    name: bestian/deutschebahn.timetable.prometheus.exporter
+    tag: latest
+
+  imagePullSecrets: []
+
+  healthcheck_url: /metrics
+
+  config:
+    app:
+      port: 8080
+
+  replicaCount: 1
+  resources:
+    requests:
+      cpu: 200m
+      memory: 128Mi
+    limits:
+      cpu: 200m
+      memory: 128Mi
+
+  # API ID and Secret
+  # Go to: https://developers.deutschebahn.com/db-api-marketplace/apis/
+  #
+  DB_CLIENT_ID: aed...73d
+  DB_CLIENT_SECRET: a61b...6fe
+  # How many records to export from NOW to MINUTES
+  KEEP_MINUTES: "30"
+  # Station ID, look at the file `UIC-Bahnhofsnummer.csv`
+  DB_STATION: "8004128"
