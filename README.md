@@ -129,6 +129,6 @@ This project is licensed under BSD 2-Clause License.
 
 ## URLs
 
-- **GitHub**: https://github.com/BestianCode/deutschebahn.timetable.prometheus.exporter
-- **DockerHub**: https://hub.docker.com/r/bestian/deutschebahn.timetable.prometheus.exporter
-- **Grafana Dashbard**: https://grafana.com/grafana/dashboards/22489 or [DB Departures JSON File](https://github.com/BestianCode/deutschebahn.timetable.prometheus.exporter/tree/master/grafana)
+- **Prometheus Exporter's HelmChart and Dockerfile**: https://github.com/BestianCode/deutschebahn.timetable.prometheus.exporter
+- **Prometheus Exporter's Docker Image**: https://hub.docker.com/repository/docker/bestian/deutschebahn.timetable.prometheus.exporter/general
+- **Grafana DashBoard**: https://grafana.com/grafana/dashboards/22489 or [DB Departures JSON File](https://github.com/BestianCode/deutschebahn.timetable.prometheus.exporter/tree/master/grafana)
