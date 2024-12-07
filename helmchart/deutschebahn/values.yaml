@@ -31,3 +31,11 @@ deutschebahn:
   KEEP_MINUTES: "30"
   # Station ID, look at the file `UIC-Bahnhofsnummer.csv`
   DB_STATION: "8004128"
+
+  service:
+    enabled: false
+  ingress:
+    enabled: false
+    hosts:
+      - dbahn.google.com
+      - dbahn.amazon.de

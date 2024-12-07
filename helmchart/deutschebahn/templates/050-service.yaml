@@ -1,0 +1,21 @@
+{{- if or .Values.deutschebahn.service.enabled .Values.deutschebahn.ingress.enabled -}}
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: {{ include "oshelm.fullname" . }}
+  labels:
+    {{- include "oshelm.labels" . | nindent 4 }}
+spec:
+  selector:
+    application: {{ include "oshelm.fullname" . }}
+  ports:
+    - name: main
+      protocol: TCP
+      port: 80
+      targetPort: {{ .Values.deutschebahn.config.app.port }}
+    - name: app
+      protocol: TCP
+      port: {{ .Values.deutschebahn.config.app.port }}
+      targetPort: {{ .Values.deutschebahn.config.app.port }}
+{{- end }}
