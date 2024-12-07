@@ -64,7 +64,7 @@
 7. **Deply Helm Chart:**
 
     ```bash
-    helm upgrade --install db-exporter helmchart/deutschebahn/ --namespace db-exporter --create-namespace
+    helm upgrade --install db-exporter helmchart/deutschebahn/ --namespace db-exporter --create-namespace --values ./my-values.yaml
     ```
 
 ## Endpoints
